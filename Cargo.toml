@@ -1,0 +1,28 @@
+[package]
+name = "ioctl-term-light"
+version = "0.1.0"
+edition = "2024"
+
+description = """Lightweight crate to retrieve the dimensions (.i.e.: width/height) of a UNIX terminal in terms of rows/columns."""
+
+documentation = "https://docs.rs/ioctl-term-light"
+readme = "README.md"
+homepage = "https://github.com/gabrielfalcao/utf8-rune"
+license = "MIT"
+keywords = ["unix", "terminal", "ioctl"]
+authors = ["Gabriel DeMoura <gabrielteratos@gmail.com>"]
+categories = ["command-line-interface", "os::unix-apis"]
+
+[features]
+default = ["stdout"]
+fd = ["stdio"]
+any-fd = ["fd"]
+stdio = ["stdin", "stdout", "stderr"]
+stdin = []
+stdout = []
+stderr = []
+u8 = []
+
+[lib]
+name = "ioctl_term_light"
+path = "src/lib.rs"
