@@ -1,6 +1,6 @@
 [package]
 name = "ioctl-term-light"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2024"
 
 description = """Lightweight crate to retrieve the dimensions (.i.e.: width/height) of a UNIX terminal in terms of rows/columns."""
@@ -14,7 +14,7 @@ authors = ["Gabriel DeMoura <gabrielteratos@gmail.com>"]
 categories = ["command-line-interface", "os::unix-apis"]
 
 [features]
-default = ["stdout"]
+default = []
 fd = ["stdio"]
 any-fd = ["fd"]
 stdio = ["stdin", "stdout", "stderr"]
